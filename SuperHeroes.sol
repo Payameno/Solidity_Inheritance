@@ -11,6 +11,8 @@ contract Mage is Hero(50) {
     Enemy enemy = Enemy(_enemyAddress);
 
     enemy.takeAttack(Hero.AttackTypes.Spell);
+    //implements the function in the parent class
+    super.attack(_enemyAddress);
 
   }
 
@@ -23,6 +25,7 @@ contract Warrior is Hero(200) {
       Enemy enemy = Enemy(_enemyAddress);
 
       enemy.takeAttack(Hero.AttackTypes.Brawl);
+      super.attack(_enemyAddress);
 
   }
 
